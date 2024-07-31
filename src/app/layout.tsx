@@ -16,10 +16,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+  
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+      <ClerkProvider>
+        {children} 
+        </ClerkProvider>
+      </body>
     </html>
-    </ClerkProvider>
+   
   );
 }
+
+
